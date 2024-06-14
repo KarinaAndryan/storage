@@ -1,12 +1,12 @@
 import pandas as pd
 import sys
+import key
 import requests
 import db_connection
 from datetime import datetime
 
 url = 'https://statistics-api.wildberries.ru/api/v1/supplier/stocks'
-wb_api_token = 'eyJhbGciOiJFUzI1NiIsImtpZCI6IjIwMjMxMjI1djEiLCJ0eXAiOiJKV1QifQ.eyJlbnQiOjEsImV4cCI6MTcyNDA5ODY2NywiaWQiOiI4NWU3NjNhNC04NGEyLTRmYmEtYmQyNC1kMDdkNjM3ZGQ1NzMiLCJpaWQiOjExMjM3MzI3NSwib2lkIjoxMzM1OTUyLCJzIjoxMDczNzQyMzM0LCJzaWQiOiI1ZjFmOTM4My03MmM4LTQ2NDgtYWRhZC0wMDZhODM2ZTNkMGYiLCJ0IjpmYWxzZSwidWlkIjoxMTIzNzMyNzV9.YgYDrYAo-nfPCnOxeZ8QE6HwApDfVQno547Ye1p3JMu83V4iAH3w4R5BOCRlHxFbisluvLvyFlJMmbR3Rx0eQw'
-headers = {'Authorization': wb_api_token}
+headers = {'Authorization': key.wb_api_token}
 params = {'dateFrom' : '2023-08-31'}
 
 try:
